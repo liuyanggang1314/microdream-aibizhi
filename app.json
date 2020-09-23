@@ -1,0 +1,55 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/luo/luo",
+    "pages/me/me",
+    "pages/swipe/swipe",
+    "pages/classification/classification",
+    "pages/luoplay/luoplay"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#FC5C7D",
+    "navigationBarTitleText": "Microdream",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#8a8a8a",
+    "selectedColor": "#FC5C7D",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "壁纸",
+        "iconPath": "/img/tab_01.png",
+        "selectedIconPath": "/img/tab_1.png"
+      },
+      {
+        "pagePath": "pages/luo/luo",
+        "text": "落",
+        "iconPath": "/img/tab_02.png",
+        "selectedIconPath": "/img/tab_2.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我的",
+        "iconPath": "/img/tab_03.png",
+        "selectedIconPath": "/img/tab_3.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "van-tab": "@vant/weapp/tab/index",
+    "van-tabs": "@vant/weapp/tabs/index",
+    "van-row": "@vant/weapp/row/index",
+    "van-col": "@vant/weapp/col/index",
+    "van-image": "@vant/weapp/image/index",
+    "van-toast": "@vant/weapp/toast/index",
+    "van-divider": "@vant/weapp/divider/index",
+    "van-icon": "@vant/weapp/icon/index",
+    "van-cell": "@vant/weapp/cell/index",
+  "van-cell-group": "@vant/weapp/cell-group/index"
+  }
+}

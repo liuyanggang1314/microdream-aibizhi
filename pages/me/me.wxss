@@ -1,0 +1,9 @@
+/* pages/me/me.wxss */
+.me-head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 35vh;
+  line-height: 35vh;
+  background: linear-gradient(to right, #7BC6CC, #BE93C5);
+}

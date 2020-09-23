@@ -1,0 +1,11 @@
+/* pages/classification/classification.wxss */
+.row {
+  margin-top: 4px;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+.col {
+  padding-left: 2px;
+  padding-right: 2px;
+}

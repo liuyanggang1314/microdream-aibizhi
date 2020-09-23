@@ -1,0 +1,26 @@
+/**index.wxss**/
+.row {
+  margin-top: 4px;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+.col {
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+.swiper {
+  height: 50vw;
+  margin-top: 4px;
+}
+
+.category-view {
+  margin-bottom: 6px;
+}
+
+.category {
+  margin-left: 4px;
+  margin-top: -26px;
+  color: white;
+}

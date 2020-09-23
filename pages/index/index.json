@@ -1,0 +1,6 @@
+{
+  "usingComponents": {},
+  "enablePullDownRefresh": false,
+  "onReachBottomDistance": 20,
+  "navigationBarTitleText": "壁纸"
+}

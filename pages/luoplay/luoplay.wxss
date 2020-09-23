@@ -1,0 +1,7 @@
+/* pages/luoplay/luoplay.wxss */
+.video {
+  background-color: black;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}

@@ -1,0 +1,9 @@
+<!--pages/me/me.wxml-->
+<view class="me-head">
+
+</view>
+<van-cell-group>
+  <van-cell title="清除缓存" is-link bind:click="clearStorage" />
+  <van-cell title="抖音解码" is-link bind:click="toMicrodream" />
+  <van-cell title="微梦想" is-link bind:click="toMicrodream" />
+</van-cell-group>
