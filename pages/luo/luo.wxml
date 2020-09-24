@@ -3,9 +3,9 @@
 	<van-tab title="推荐">
 		<view>
 			<van-row custom-class="row">
-				<van-col span="8" wx:for="{{10}}" wx:key="index" custom-class="col">
-					<van-image fit="fill" width="100%" height="50vw" id="1"
-						src="http://img.aibizhi.adesk.com/5f436ef0e7bce775587a9a8f?imageMogr2/thumbnail/!350x540r/gravity/Center/crop/350x540"
+				<van-col span="8" wx:for="{{featuredVideo}}" wx:key="index" custom-class="col">
+					<van-image fit="fill" width="100%" height="50vw" id="{{item.video}}" lazy-load="true"
+						src="{{item.img}}"
 						bindtap="onGoLuoPlay" />
 				</van-col>
 			</van-row>
@@ -13,18 +13,18 @@
 	</van-tab>
 	<van-tab title="最新">
 		<van-row custom-class="row">
-			<van-col span="8" wx:for="{{10}}" wx:key="index" custom-class="col">
-				<van-image fit="fill" width="100%" height="50vw" id="1"
-					src="http://img.aibizhi.adesk.com/5f436ef0e7bce775587a9a8f?imageMogr2/thumbnail/!350x540r/gravity/Center/crop/350x540"
+			<van-col span="8" wx:for="{{newVideo}}" wx:key="index" custom-class="col">
+				<van-image fit="fill" width="100%" height="50vw" id="{{item.video}}" lazy-load="true"
+					src="{{item.img}}"
 					bindtap="onGoLuoPlay" />
 			</van-col>
 		</van-row>
 	</van-tab>
 	<van-tab title="热门">
 		<van-row custom-class="row">
-			<van-col span="8" wx:for="{{10}}" wx:key="index" custom-class="col">
-				<van-image fit="fill" width="100%" height="50vw" id="1"
-					src="http://img.aibizhi.adesk.com/5f436ef0e7bce775587a9a8f?imageMogr2/thumbnail/!350x540r/gravity/Center/crop/350x540"
+			<van-col span="8" wx:for="{{hotVideo}}" wx:key="index" custom-class="col">
+				<van-image fit="fill" width="100%" height="50vw" id="{{item.video}}" lazy-load="true"
+				src="{{item.img}}"
 					bindtap="onGoLuoPlay" />
 			</van-col>
 		</van-row>

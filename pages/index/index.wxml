@@ -1,35 +1,42 @@
 <!--index.wxml-->
 <van-tabs sticky active="{{ active }}" bind:change="onTabClick" color="#FC5C7D">
 	<van-tab title="推荐">
-		<view>
-			<swiper indicator-dots="true" autoplay="true" circular="true" interval="5000" duration="500" indicator-active-color="#FC5C7D" class="swiper">
-				<block wx:for="{{3}}" wx:key="item">
-					<swiper-item bindtap="onGoSwiper" id="{{item}}">
-						<van-image fit="fill" width="100%" height="50vw" src="http://img0.aibizhi.adesk.com/download/5f5b4389e7bce74752990c11" />
+		<view wx:if="{{ !isFirst }}">
+			<swiper indicator-dots="true" autoplay="true" circular="true" interval="5000" duration="500"
+				indicator-active-color="#FC5C7D" class="swiper">
+				<block wx:for="{{homepage}}" wx:key="index">
+					<swiper-item bindtap="onGoSwiper" id="{{index}}">
+						<van-image fit="fill" width="100%" height="50vw" lazy-load="true" src="{{item.thumb}}" />
 					</swiper-item>
 				</block>
 			</swiper>
-			<van-divider contentPosition="center" customStyle="color: #FC5C7D; border-color: #FC5C7D; font-size: 15px;margin-bottom: 8px;margin-left: 16px;margin-right: 16px;">热门</van-divider>
+			<van-divider contentPosition="center"
+				customStyle="color: #FC5C7D; border-color: #FC5C7D; font-size: 15px;margin-bottom: 8px;margin-left: 16px;margin-right: 16px;">
+				热门</van-divider>
 			<van-row custom-class="row">
-				<van-col span="8" wx:for="{{10}}" wx:key="index" custom-class="col">
-					<van-image fit="fill" width="100%" height="50vw" src="http://img.aibizhi.adesk.com/5f436ef0e7bce775587a9a8f?imageMogr2/thumbnail/!350x540r/gravity/Center/crop/350x540" />
+				<van-col span="8" wx:for="{{vertical}}" wx:key="index" custom-class="col">
+					<van-image fit="fill" width="100%" height="50vw" lazy-load="true" src="{{item.thumb}}" id="{{item.preview}}"
+						bindtap="clickImgPreview" />
 				</van-col>
 			</van-row>
 		</view>
 	</van-tab>
 	<van-tab title="最新">
 		<van-row custom-class="row">
-			<van-col span="8" wx:for="{{25}}" wx:key="index" custom-class="col">
-				<van-image fit="fill" width="100%" height="50vw" src="http://img.aibizhi.adesk.com/5f436ef0e7bce775587a9a8f?imageMogr2/thumbnail/!350x540r/gravity/Center/crop/350x540" />
+			<van-col span="8" wx:for="{{newVertical}}" wx:key="index" custom-class="col">
+				<van-image fit="fill" width="100%" height="50vw" lazy-load="true" src="{{item.thumb}}" id="{{item.preview}}"
+					bindtap="clickImgPreview" />
 			</van-col>
 		</van-row>
 	</van-tab>
 	<van-tab title="分类">
 		<van-row custom-class="row">
-			<van-col span="8" wx:for="{{20}}" wx:key="key" custom-class="col">
+			<van-col span="8" wx:for="{{category}}" wx:key="key" custom-class="col">
 				<view class="category-view">
-					<image style="width: 100%; height: 33.3vw;" mode="aspectFill" src="http://img.aibizhi.adesk.com/5f6323b8e7bce75e9a5d7f77?imageMogr2/thumbnail/!640x480r/gravity/Center/crop/640x480" id="{{index}}" lazy-load="true" bindtap="onGoClassification"></image>
-					<view class="category">美女</view>
+					<image style="width: 100%; height: 33.3vw;" mode="aspectFill"
+						src="{{item.cover}}"
+						id="{{item.id}}" lazy-load="true" bindtap="onGoClassification"></image>
+					<view class="category">{{item.name}}</view>
 				</view>
 			</van-col>
 		</van-row>

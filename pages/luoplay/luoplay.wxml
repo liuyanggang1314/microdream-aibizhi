@@ -1,4 +1,6 @@
 <!--pages/luoplay/luoplay.wxml-->
-<video wx:if="{{id!==null}}" id="myVideo" src="{{id}}" autoplay loop controls class="video" />
-<van-image width="100vw" height="100vh" fit="cover" wx:if="{{id==null}}"
-  src="http://sjbz.fd.zol-img.com.cn/t_s1080x1920c/g5/M00/00/02/ChMkJ1fJVACIOcDTAAmrpgi1J2QAAU9uQETzP4ACau-914.jpg"/>
+<view class="video">
+  <video wx:if="{{id!==null}}" id="myVideo" src="{{id}}" autoplay loop controls class="video" />
+  <image class="video" wx:if="{{id==null}}"
+    src="http://sjbz.fd.zol-img.com.cn/t_s1080x1920c/g5/M00/00/02/ChMkJ1fJVACIOcDTAAmrpgi1J2QAAU9uQETzP4ACau-914.jpg" />
+</view>

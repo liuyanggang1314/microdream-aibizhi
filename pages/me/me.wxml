@@ -1,9 +1,19 @@
 <!--pages/me/me.wxml-->
 <view class="me-head">
-
+  <van-button color="linear-gradient(to right, #4bb0ff, #6149f6)" wx:if="{{!hasUserInfo && canIUse}}"
+    open-type="getUserInfo" bindgetuserinfo="getUserInfo">
+    登录
+  </van-button>
+  <block wx:else>
+    <van-image round width="5rem" height="5rem" fit="cover" src="{{userInfo.avatarUrl}}" class="avatar"/>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </block>
 </view>
 <van-cell-group>
   <van-cell title="清除缓存" is-link bind:click="clearStorage" />
-  <van-cell title="抖音解码" is-link bind:click="toMicrodream" />
   <van-cell title="微梦想" is-link bind:click="toMicrodream" />
 </van-cell-group>
+<view class="me-foot">
+  <view class="di">目之所及，皆是回忆，心之所想，皆是过往，眼之所看，皆是遗憾</view>
+	<view class="di">Microdream Version 1.2.</view>
+</view>

@@ -1,15 +1,15 @@
 <!--pages/swipe/swipe.wxml-->
-<image style="width: 100%; height: 54vw;" mode="aspectFill"
-  src="http://img.aibizhi.adesk.com/5f6460f9e7bce75eee0c845f?imageView2/3/h/720" id="1" lazy-load="true">
+<image style="width: 100%; height: 54vw;" mode="aspectFill" src="{{lcover}}" lazy-load="true">
 </image>
 <view class="back-title" style="top:{{headerPosi.top + 6}}px;left: 8px;">
   <van-icon name="arrow-left" color="#FC5C7D" size="25px" bind:click="goback" />
 </view>
-<view class="category van-ellipsis">将美好赠予你</view>
-<view class="desc">将美好赠予你，让世间美好与你环环相扣。</view>
+<view class="category van-ellipsis">{{name}}</view>
+<view class="desc">{{desc}}</view>
 <van-row custom-class="row">
-  <van-col span="8" wx:for="{{10}}" wx:key="index" custom-class="col">
-    <van-image fit="cover" width="100%" height="33.3vw"
-      src="http://img.aibizhi.adesk.com/5f6460f9e7bce75eee0c845f?imageView2/3/h/720" />
+  <van-col span="8" wx:for="{{wallpaper}}" wx:key="index" custom-class="col">
+    <van-image fit="cover" width="100%" height="33.3vw" lazy-load="true"
+      src="{{item.img}}" id="{{item.preview}}" bindtap="clickImgPreview"/>
   </van-col>
 </van-row>
+<van-toast id="van-toast" />
